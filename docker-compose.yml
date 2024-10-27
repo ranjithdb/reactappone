@@ -21,7 +21,7 @@ services:
     build:
       context: ./express-server
     ports:
-      - "3001:3001"
+      - "3010:3010"
     networks:
       - my-network
 
