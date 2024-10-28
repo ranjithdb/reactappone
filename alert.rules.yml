@@ -1,0 +1,12 @@
+groups:
+  - name: application_alerts
+    rules:
+      - alert: ApplicationDown
+        expr: up{job="application"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "The application is down"
+          description: "The application instance has been unreachable for more than 1 minute."
+
